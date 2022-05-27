@@ -160,7 +160,7 @@ public class RCC_Light : RCC_Core {
 			_light = GetComponent<Light>();
 
 		if(defaultIntensity == 0)
-			defaultIntensity = _light.intensity;
+			defaultIntensity = 1f;
 		
 		_light.intensity = 0f;
 
