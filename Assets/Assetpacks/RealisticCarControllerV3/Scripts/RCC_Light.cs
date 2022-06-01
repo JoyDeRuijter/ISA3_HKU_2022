@@ -64,6 +64,7 @@ public class RCC_Light : RCC_Core {
 	public bool isBreakable = true;     //	Can it break at certain damage?
 	public int breakPoint = 35;     //	Light will be broken at this point.
 	private bool broken = false;            //	Is this light broken currently?
+	private bool allLightsOn;
 
 	// For Indicators.
 	private RCC_CarControllerV3.IndicatorsOn indicatorsOn;
@@ -80,7 +81,12 @@ public class RCC_Light : RCC_Core {
 		if (carController)
 			Init();
 
-    }
+		carController.lowBeamHeadLightsOn = true;
+		carController.highBeamHeadLightsOn = true;
+		allLightsOn = true;
+
+
+	}
 
     public void Init () {
 
@@ -120,7 +126,6 @@ public class RCC_Light : RCC_Core {
 		if(RCCSettings.useLightsAsVertexLights){
 
 			_light.renderMode = LightRenderMode.ForceVertex;
-			_light.cullingMask = 0;
 
 		}else{
 
@@ -160,7 +165,7 @@ public class RCC_Light : RCC_Core {
 			_light = GetComponent<Light>();
 
 		if(defaultIntensity == 0)
-			defaultIntensity = 1f;
+			defaultIntensity = _light.intensity;
 		
 		_light.intensity = 0f;
 
@@ -219,9 +224,11 @@ public class RCC_Light : RCC_Core {
 			break;
 
 		case LightType.BrakeLight:
-			
-			if(parkLightFound)
+
+			if (parkLightFound)
 				Lighting(carController.brakeInput >= .1f ? defaultIntensity : 0f);
+			else if (allLightsOn)
+				Lighting(defaultIntensity);
 			else
 				Lighting(carController.brakeInput >= .1f ? defaultIntensity : !carController.lowBeamHeadLightsOn ? 0f : .25f);
 			break;

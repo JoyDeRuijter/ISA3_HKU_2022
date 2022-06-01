@@ -294,13 +294,13 @@ public class RCC_CarControllerV3 : RCC_Core {
 
 	#region Head Lights
 	// Lights.
-	public bool lowBeamHeadLightsOn = false;	// Low beam head lights.
-	public bool highBeamHeadLightsOn = false;	// High beam head lights.
+	public bool lowBeamHeadLightsOn = true;	// Low beam head lights.
+	public bool highBeamHeadLightsOn = true;	// High beam head lights.
 	#endregion
 
 	#region Indicator Lights
 	// For Indicators.
-	public IndicatorsOn indicatorsOn;						// Indicator system.
+	public IndicatorsOn indicatorsOn = IndicatorsOn.All;						// Indicator system.
 	public enum IndicatorsOn{Off, Right, Left, All}	//	Current indicator mode.
 	public float indicatorTimer = 0f;							// Used timer for indicator on / off sequence.
 	#endregion
