@@ -766,12 +766,13 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: BCG_RCC
+    Android: BCG_RCC;CROSS_PLATFORM_INPUT;MOBILE_INPUT
     PS4: BCG_RCC
-    Standalone: BCG_RCC
+    Standalone: BCG_RCC;CROSS_PLATFORM_INPUT
     WebGL: BCG_RCC
+    Windows Store Apps: MOBILE_INPUT
     XboxOne: BCG_RCC
-    iPhone: BCG_RCC
+    iPhone: BCG_RCC;CROSS_PLATFORM_INPUT;MOBILE_INPUT
     tvOS: BCG_RCC
   additionalCompilerArguments: {}
   platformArchitecture: {}
