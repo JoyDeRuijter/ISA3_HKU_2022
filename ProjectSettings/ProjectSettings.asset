@@ -765,7 +765,15 @@ PlayerSettings:
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    Android: BCG_RCC;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    PS4: BCG_RCC
+    Standalone: BCG_RCC;CROSS_PLATFORM_INPUT
+    WebGL: BCG_RCC
+    Windows Store Apps: MOBILE_INPUT
+    XboxOne: BCG_RCC
+    iPhone: BCG_RCC;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    tvOS: BCG_RCC
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
@@ -853,7 +861,7 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []

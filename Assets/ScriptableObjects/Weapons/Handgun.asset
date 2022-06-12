@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ee378ee8e1ede4c9544ec85788b620, type: 3}
+  m_Name: Handgun
+  m_EditorClassIdentifier: 
+  name: Hand gun
+  weaponPrefab: {fileID: 7971692709640081634, guid: a34966240f50b5a41a06204cacaae883, type: 3}
+  damage: 20
+  range: 2000
+  spawnPosition: {x: 0.14, y: 0.05, z: -0.03}
+  spawnRotation: {x: -0.72061664, y: 0.38588902, z: -0.43663138, w: 0.3757052}
+  reloadTime: 1.2
+  maxAmmo: 11
+  fireRate: 0.4
+  impactForce: 0
+  muzzleFlashLocation: {x: 0, y: 0, z: 0}
+  muzzleFlash: {fileID: 0}
+  impactEffect: {fileID: 0}
+  bloodEffect: {fileID: 0}
+  weaponAnimator: {fileID: 0}
+  icon: {fileID: 0}
+  shotSound: {fileID: 0}
+  reloadSound: {fileID: 0}
+  currentAmmo: -168
+  isReloading: 0
